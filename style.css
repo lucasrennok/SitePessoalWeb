@@ -1,0 +1,215 @@
+:root {
+  --cor-divs: #344fa1;
+  --cor-borda: #3d84b8;
+  --cor-borda-secundaria: #3d85b880;
+  --cor-fundo: #3f3697;
+  --cor-letra: #f0ebcc;
+
+  font-size: 67.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 3rem;
+  background-color: var(--cor-fundo);
+  color: var(--cor-letra);
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header,
+footer {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+body legend {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+header,
+#dadosPagina,
+footer {
+  padding: 1rem;
+  background-color: var(--cor-divs);
+  border-radius: 30px 1px;
+}
+
+#dadosPagina {
+  border: 0.3rem solid var(--cor-borda);
+  margin: 1rem;
+  width: 90%;
+}
+
+.campo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.campo fieldset {
+  width: 100%;
+  height: 100%;
+  padding: 0.6rem;
+  margin: 1rem;
+  border-radius: 10px 0 20px 10px;
+  transition-duration: 0.6s;
+}
+
+.campo fieldset:hover {
+  box-shadow: 3px 3px;
+  transition-duration: 0.6s;
+}
+
+#imgAvatar {
+  width: 100px;
+  height: 100px;
+  border: 0.3rem double var(--cor-borda);
+  border-radius: 100%;
+  transition-duration: 2s;
+}
+
+#imgAvatar:hover {
+  transform: rotate3d(0, 1, 1, 360deg);
+  transition-duration: 2s;
+}
+
+#campoDados {
+  margin: 0 1rem;
+  width: 98%;
+}
+
+.dadosPessoais {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.dadosComuns {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dadosComuns img {
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-letra);
+  transition-duration: 0.6s;
+}
+
+a:hover {
+  font-weight: bold;
+  font-size: 110%;
+  transition-duration: 0.6s;
+}
+
+header,
+footer {
+  border: 0.2rem solid var(--cor-borda-secundaria);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  border-radius: 15px 15px 1px 1px;
+}
+
+footer {
+  border-radius: 1px 1px 15px 15px;
+}
+
+#githubImg {
+  width: 30px;
+  padding-right: 1rem;
+  filter: invert(100%);
+}
+
+p {
+  margin: 0.3rem;
+}
+
+footer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1000px) {
+  :root {
+    font-size: 75%;
+  }
+
+  body {
+    margin: 2rem 5rem;
+  }
+
+  #dadosPagina {
+    width: 80%;
+  }
+
+  #imgAvatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+  }
+
+  .campo {
+    width: 100%;
+  }
+
+  .campo fieldset {
+    padding: 1rem;
+    margin: 1rem 5rem;
+  }
+
+  #campoDados fieldset {
+    margin: 0 3rem 0 2rem;
+  }
+
+  #campoDados {
+    width: 90%;
+    margin: 0 5rem;
+  }
+
+  .dadosPessoais {
+    margin: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dadosComuns img {
+    width: 70px;
+    height: 70px;
+  }
+
+  header,
+  footer {
+    width: 80%;
+  }
+}
